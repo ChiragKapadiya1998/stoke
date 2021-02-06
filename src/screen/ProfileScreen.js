@@ -2,19 +2,18 @@ import React from 'react'
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import CustomHeader from '../Components/CustomHeader'
 
-
-const HomeScreen = ({ navigation }) => {
+const ProfileScreen = ({ navigation }) => {
   return (
 
     <SafeAreaView>
+      <CustomHeader title='Profile' righticons={require('../Image/edit.png')} navigation={() => { navigation.navigate('EditeProfile') }} />
       <View>
-        <CustomHeader title='Home' navigation={() => { navigation.openDrawer() }} lefticons={require('../Image/menu.png')} />
-        <Text>home</Text>
+        <Text>ProfileScreen</Text>
       </View>
     </SafeAreaView>
   )
 }
 
-export default HomeScreen
+export default ProfileScreen
 
 const styles = StyleSheet.create({})
